@@ -288,6 +288,7 @@
             grid-template-columns: 376px 1fr;
             align-items: center;
             gap: 6.4rem;
+            padding: 2.4rem 3.2rem;
         }
 
         .newsletter-form__content {
