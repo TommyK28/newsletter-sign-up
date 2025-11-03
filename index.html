@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="./assets/styles/style.css" />
+        <title>
+            Frontend Mentor | Newsletter sign-up form with success message
+        </title>
+    </head>
+    <body>
+        <!-- Sign-up form start -->
+        <main>
+            <section>
+                <div class="newsletter-form">
+                    <picture class="newsletter-form__image">
+                        <source
+                            media="(min-width: 1024px)"
+                            srcset="
+                                ./assets/images/illustration-sign-up-desktop.svg
+                            "
+                        />
+                        <source
+                            media="(min-width: 768px)"
+                            srcset="
+                                ./assets/images/illustration-sign-up-tablet.svg
+                            "
+                        />
+                        <img
+                            src="./assets/images/illustration-sign-up-mobile.svg"
+                            alt="Illustration sign up"
+                        />
+                    </picture>
+
+                    <div class="newsletter-form__content">
+                        <h2 class="newsletter-form__title">Stay updated!</h2>
+                        <p class="newsletter-form__description">
+                            Join 60,000+ product managers receiving monthly
+                            updates on:
+                        </p>
+
+                        <ul class="newsletter-form__lists">
+                            <li class="newsletter-form__list">
+                                Product discovery and building what matters
+                            </li>
+                            <li class="newsletter-form__list">
+                                Measuring to ensure updates are a success
+                            </li>
+                            <li class="newsletter-form__list">
+                                And much more!
+                            </li>
+                        </ul>
+
+                        <form
+                            class="newsletter-form__form"
+                            id="newsletterForm"
+                            novalidate
+                        >
+                            <div class="newsletter-form__group">
+                                <div class="newsletter-form__group-info">
+                                    <label
+                                        for="email"
+                                        class="newsletter-form__label"
+                                        >Email address</label
+                                    >
+
+                                    <span
+                                        class="newsletter-form__input-error-msg"
+                                        id="errorMessage"
+                                    >
+                                        Valid email required
+                                    </span>
+                                </div>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="email@company.com"
+                                    class="newsletter-form__input"
+                                    required
+                                />
+                            </div>
+                            <button
+                                type="submit"
+                                class="button button--primary"
+                            >
+                                <span> Subscribe to monthly newsletter </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Sign-up form end -->
+
+                <!-- Success message start -->
+                <dialog id="successModal" class="success-dialog">
+                    <div class="success-dialog__wrapper">
+                        <div class="success-dialog__content">
+                            <svg
+                                class="icon icon--success"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="64"
+                                height="64"
+                                fill="none"
+                                viewBox="0 0 64 64"
+                            >
+                                <circle cx="32" cy="32" r="32" fill="url(#a)" />
+                                <path
+                                    stroke="#fff"
+                                    stroke-width="4"
+                                    d="m18.286 34.686 8.334 7.98 19.094-18.285"
+                                />
+                                <defs>
+                                    <linearGradient
+                                        id="a"
+                                        x1="0"
+                                        x2="64"
+                                        y1="32"
+                                        y2="32"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop stop-color="#ff6a3a" />
+                                        <stop offset="1" stop-color="#ff527b" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                            <h2 class="success-dialog__title">
+                                Thanks for subscribing!
+                            </h2>
+
+                            <p class="success-dialog__message">
+                                A confirmation email has been sent to
+                                <strong id="userEmailPlaceholder"></strong>.
+                                Please open it and click the button inside to
+                                confirm your subscription.
+                            </p>
+                        </div>
+
+                        <button
+                            id="dismissModal"
+                            class="button button--primary success-dialog__button"
+                        >
+                            <span> Dismiss message </span>
+                        </button>
+                    </div>
+                </dialog>
+                <!-- Success message end -->
+            </section>
+        </main>
+
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>
