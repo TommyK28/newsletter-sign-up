@@ -19,6 +19,8 @@
         <!-- Sign-up form start -->
         <main>
             <section>
+                <h1 class="sr-only">Newsletter sign-up form</h1>
+
                 <div class="newsletter-form">
                     <picture class="newsletter-form__image">
                         <source
@@ -100,7 +102,13 @@
                 <!-- Sign-up form end -->
 
                 <!-- Success message start -->
-                <dialog id="successModal" class="success-dialog">
+                <dialog
+                    id="successModal"
+                    class="success-dialog"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="dialogTitle"
+                >
                     <div class="success-dialog__wrapper">
                         <div class="success-dialog__content">
                             <svg
@@ -132,7 +140,7 @@
                                 </defs>
                             </svg>
 
-                            <h2 class="success-dialog__title">
+                            <h2 d="dialogTitle" class="success-dialog__title">
                                 Thanks for subscribing!
                             </h2>
 
@@ -147,6 +155,7 @@
                         <button
                             id="dismissModal"
                             class="button button--primary success-dialog__button"
+                            aria-label="Close success message"
                         >
                             <span> Dismiss message </span>
                         </button>
